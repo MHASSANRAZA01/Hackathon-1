@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Resume Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Form Section -->
+    <div class="form-container">
+      <h2>Enter Your Information</h2>
+      <form id="resumeForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="linkedin">LinkedIn Profile Link:</label>
+        <input type="url" id="linkedin" required />
+
+        <label for="education">Education:</label>
+        <input
+          type="text"
+          id="education"
+          placeholder="e.g., Karachi Board"
+          required
+        />
+
+        <label for="skills">Skills (Separate with commas):</label>
+        <input
+          type="text"
+          id="skills"
+          placeholder="e.g., HTML, CSS, JavaScript"
+          required
+        />
+
+        <label for="workExperience">Work Experience:</label>
+        <textarea
+          id="workExperience"
+          placeholder="Your work experience"
+        ></textarea>
+
+        <label for="profileImage">Profile Image:</label>
+        <input type="file" id="profileImage" accept="image/*" required />
+
+        <button type="submit" id="generateResume">Generate Resume</button>
+      </form>
+    </div>
+
+    <!-- Resume Display Section -->
+    <div id="resumeOutput" class="box" style="display: none">
+      <center>
+        <img
+          id="profilePic"
+          src=""
+          alt="Profile Photo"
+          class="profile-picture"
+        />
+      </center>
+      <div class="div2"><h1>Personal Information</h1></div>
+      <div class="line" id="personalInfo"></div>
+
+      <div class="div2"><h1>Education</h1></div>
+      <div class="line" id="educationInfo"></div>
+
+      <div class="div2"><h1>Work Experience</h1></div>
+      <div class="line" id="workExperienceInfo"></div>
+
+      <section id="skill">
+        <div class="div2"><h1 class="sk">Skills</h1></div>
+        <div class="line" id="skillsInfo"></div>
+      </section>
+
+      <center>
+        <!-- <button id="toggleSkills">Hide/Show Skills</button> -->
+      </center>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
